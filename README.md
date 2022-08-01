@@ -36,4 +36,4 @@
 ```py
 status=disnake.Status.idle
 ```
-Вместо **idle** любой статус из списка выше
+Вместо **idle** любой статус из [списка](https://github.com/Towa1015/discord_bot#существует-4-статуса-бота) выше
