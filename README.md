@@ -14,15 +14,26 @@
 ### Работа с ботом
 #### Создание нового бота на сайте [Discord Developers Portal](https://discord.com/developers/applications)
 
-1. Заходим на сайт и нажимаем на кнопку ![2022-08-01_21-49-39](https://user-images.githubusercontent.com/70810089/182222109-1a53e979-28e5-4528-9870-4e9eed669397.png)
+1. Заходим на [сайт](https://discord.com/developers/applications) и нажимаем на кнопку **New Application**
+2. Вводим название приложения и нажимаем **Create**
+3. Выбираем вкладку **Bot**
+4. Нажимаем **Add Bot**
+5. И снова нажимаем **Yes, do it!**
+6. Нажимаем **Reset Token** и сохраняем его где-нибудь
 
 #### Корневой файл **bot.py**
 ##### 1. Персонализация бота
 ###### Существует 4 статуса бота
- Онлайн - Online ![950408409633673216](https://user-images.githubusercontent.com/70810089/182221132-213d6823-d2c6-4620-b1c9-2eb6dfe60801.png)
+ Онлайн - online
  
- Оффлайн - Offline ![950408409574965309](https://user-images.githubusercontent.com/70810089/182221171-d0353f3a-b1c0-4b17-9524-565948a4d7ac.png)
+ Оффлайн - offline
  
- Не беспокоить - Dnd ![950408409457524756](https://user-images.githubusercontent.com/70810089/182221207-976ac40d-5965-49a5-b6bc-49593e6fb252.png)
+ Не беспокоить - dnd
  
- Не активен - Idle ![950408409621102633](https://user-images.githubusercontent.com/70810089/182221234-e25fa0f2-ab53-49c1-b9e2-60f01270687c.png)
+ Не активен - idle
+
+Что бы задать боту свой статус требуется вставить в строку
+```py
+status=disnake.Status.idle
+```
+Вместо **idle** любой статус из списка выше
