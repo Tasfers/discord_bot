@@ -9,27 +9,27 @@
 
 2. **Обязательно** включаем галочку рядом с *Add Python 3.9 to PATH* и проходим дальнейшую установку
 
-После установки Python вы так же можете установить **Visual Studio Code** для редактирования файлов бота по этой [ссылке](https://code.visualstudio.com/Download)
+После установки **Python** вы так же можете установить **Visual Studio Code** для редактирования файлов бота по этой [ссылке](https://code.visualstudio.com/Download)
 
 ### Работа с ботом
 #### Создание нового бота на сайте [Discord Developers Portal](https://discord.com/developers/applications)
 
-1. Заходим на [сайт](https://discord.com/developers/applications) и нажимаем на кнопку **New Application**
-2. Вводим название приложения и нажимаем **Create**
-3. Выбираем вкладку **Bot**
-4. Нажимаем **Add Bot**
-5. И снова нажимаем **Yes, do it!**
-6. Нажимаем **Reset Token** и сохраняем его где-нибудь
+1. Заходим на [сайт](https://discord.com/developers/applications) и нажимаем на кнопку `New Application`
+2. Вводим название приложения и нажимаем `Create`
+3. Выбираем вкладку `Bot`
+4. Нажимаем `Add Bot`
+5. И снова нажимаем `Yes, do it!`
+6. Нажимаем `Reset Token` и сохраняем его где-нибудь
 
 #### Настройка интентов (для слеш команд)
 
-Во вкладке **Bot** включаем следующие галочки
-1. Public Bot (не обязательно)
-2. Presence Intent
-3. Server Members Intent
-4. Message Content Intent
+Во вкладке `Bot` включаем следующие галочки
+1. `Public Bot` (не обязательно)
+2. `Presence Intent`
+3. `Server Members Intent`
+4. `Message Content Intent`
 
-#### Корневой файл **bot.py**
+#### Корневой файл `bot.py`
 ##### Настройка бота под себя
 ###### Статусы
  Онлайн
@@ -93,10 +93,25 @@ status=disnake.Status.idle
  **Важно** - Если айди вашего сервера не будет там то слеш команда появится/обновится только через час после её добавления/изменения
  
  ### Создание кога
- Создаем файл **<название на английском>.py** в папк **cogs**, пример - **moderation.py**
- #### Начинка кога
+ Создаем файл **<название на английском>.py** в папке **cogs**, пример - **moderation.py**
+ #### Начинка кога (Вместо Fun ставим название своего кога)
  ```py
- 
+ import disnake
+ from disnake.ext import commands
+
+ class Fun(commands.Cog):
+
+     def __init__(self, bot):
+         self.bot = bot
+
+     @commands.Cog.listener()
+     async def on_ready(self): #ивент который будет активироваться когда вы включите бота
+         print('Любой текст, к примеру: Cog Fun - Ready')
+
+     Тут будут команды и ивенты
+
+ def setup(bot):
+     bot.add_cog(Fun(bot))
  ```
  
  ### Термины
@@ -110,3 +125,6 @@ status=disnake.Status.idle
  import disnake
  from disnake.ext import commands
  ```
+ Ивент - триггер который активируется при каком либо действии, к примеру on_ready - бот включен(готов)
+ 
+ *На этом все, дальше смотрите файлы, там я буду выкладывать примеры*
