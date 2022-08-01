@@ -23,17 +23,49 @@
 
 #### Корневой файл **bot.py**
 ##### 1. Персонализация бота
-###### Существует 4 статуса бота
- Онлайн - online
- 
- Оффлайн - offline
- 
- Не беспокоить - dnd
- 
- Не активен - idle
+###### Статусы
+ Онлайн
+ ```py
+status=disnake.Status.online
+```
 
-Что бы задать боту свой статус требуется вставить в строку
+ Оффлайн
+ ```py
+status=disnake.Status.offline
+```
+
+ Не беспокоить
+ ```py
+status=disnake.Status.dnd
+```
+
+ Не активен
 ```py
 status=disnake.Status.idle
 ```
-Вместо **idle** любой статус из [списка](https://github.com/Towa1015/discord_bot#существует-4-статуса-бота) выше
+
+###### Активности
+ Играет в
+ ```py
+ activity=disnake.Game(name="игру")
+ ```
+ 
+ Смотрит
+ ```py
+ activity=disnake.Activity(type=disnake.ActivityType.watching, name="ютуб")
+ ```
+ 
+ Слушает
+ ```py
+ activity=disnake.Activity(type=disnake.ActivityType.listening, name="музыку")
+ ```
+ 
+ Стримит
+ ```py
+ activity=disnake.Streaming(name="стрим", url="https://www.twitch.tv/никнейм") #если убрать аргумент url то кнопки просто не будет, но все будет работать
+ ```
+ 
+ Соревнуется в
+ ```py
+ activity=disnake.Activity(type=disnake.ActivityType.competing, name="игре")
+ ```
