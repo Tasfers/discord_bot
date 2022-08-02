@@ -29,6 +29,9 @@
 3. `Server Members Intent`
 4. `Message Content Intent`
 
+#### Установка зависимости
+`pip install disnake` - а вот и сам disnake
+
 #### Корневой файл `bot.py`
 ##### Настройка бота под себя
 ###### Статусы
