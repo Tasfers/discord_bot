@@ -32,49 +32,35 @@
 #### Корневой файл `bot.py`
 ##### Настройка бота под себя
 ###### Статусы
- Онлайн
  ```py
-status=disnake.Status.online
-```
+ Онлайн
+ status=disnake.Status.online
 
  Оффлайн
- ```py
-status=disnake.Status.offline
-```
+ status=disnake.Status.offline
 
  Не беспокоить
- ```py
-status=disnake.Status.dnd
-```
+ status=disnake.Status.dnd
 
  Не активен
-```py
-status=disnake.Status.idle
-```
+ status=disnake.Status.idle
+ ```
 
 ###### Активности
- Играет в
  ```py
+ Играет
  activity=disnake.Game(name="игру")
- ```
  
  Смотрит
- ```py
  activity=disnake.Activity(type=disnake.ActivityType.watching, name="ютуб")
- ```
  
  Слушает
- ```py
  activity=disnake.Activity(type=disnake.ActivityType.listening, name="музыку")
- ```
  
  Стримит
- ```py
  activity=disnake.Streaming(name="стрим", url="https://www.twitch.tv/никнейм") #если убрать аргумент url то кнопки просто не будет, но все будет работать
- ```
  
  Соревнуется в
- ```py
  activity=disnake.Activity(type=disnake.ActivityType.competing, name="игре")
  ```
 
