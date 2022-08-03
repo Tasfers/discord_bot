@@ -3,11 +3,11 @@ from disnake.ext import commands
 from datetime import datetime
 
 #Все права
-add_reactions #Ставить реакции
+add_reactions #Добавлять реакции
 administrator #Администратор
 attach_files #Прикреплять файлы
 ban_members #Банить участников
-change_nickname #Изменение никнейма
+change_nickname #Изменеить никнейм
 connect #Подключаться к голосовым каналам
 create_instant_invite #Создание мгновенного приглашения
 create_private_threads #Создавать приватные ветки
@@ -20,35 +20,34 @@ kick_members #Выгонять участников
 manage_channels #Управлять каналами
 manage_emojis #Управлять эмодзи
 manage_emojis_and_stickers #Управлять эмодзи и стикерами
-manage_events #Управлять ивент               
-manage_guild
-manage_messages
-manage_nicknames
-manage_permissions
-manage_roles
-manage_threads
-manage_webhooks
-mention_everyone
-moderate_members
-move_members
-mute_members
-priority_speaker
-read_message_history
-read_messages
-request_to_speak
-send_messages
-send_messages_in_threads
-send_tts_messages
-speak
-start_embedded_activities
-stream
-use_external_emojis
-use_external_stickers
-use_slash_commands
-use_voice_activation
-view_audit_log
-view_channel
-view_guild_insights
+manage_events #Управлять ивентами (Событиями)
+manage_guild #Управлять сервером
+manage_messages #Удалять сообщения
+manage_nicknames #Изменять никнеймы участникам
+manage_permissions #Управлять правами
+manage_roles #Управлять ролями
+manage_threads #Управлять ветками
+manage_webhooks #Управлять вебхуками
+mention_everyone #Упоминать все роли (everyone, here и все другие)
+moderate_members #Вроде как тайм-аут (Мут)
+move_members #Перемещать участников в другие голосовые каналы
+mute_members #Отключать микрофон у участников
+priority_speaker #Приоритетный режим
+read_message_history #Читать историю сообщений
+request_to_speak #Поднять руку в требунах
+send_messages #Отправлять сообщения
+send_messages_in_threads #Отправлять сообщения в ветках
+send_tts_messages #Отправлять tts сообщения
+speak #Говорить
+start_embedded_activities #Вроде как запускать активности в войсе
+stream #Включать стрим
+use_external_emojis #Это вроде то же что и на строке 17
+use_external_stickers #Это вроде то же что и на строке 18
+use_slash_commands #Использовать слеш команды
+use_voice_activation #Использовать активацию по голосу в голосовом канале
+view_audit_log #Просматривать журнал аудита
+view_channel #Просматривать канал
+view_guild_insights #Просматривать информацию о сервере
 
 class Permissions(commands.Cog):
 
