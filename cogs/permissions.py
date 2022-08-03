@@ -38,7 +38,7 @@ request_to_speak #Поднять руку в требунах
 send_messages #Отправлять сообщения
 send_messages_in_threads #Отправлять сообщения в ветках
 send_tts_messages #Отправлять tts сообщения
-speak #Говорить
+speak #Говорить в голосовом канале
 start_embedded_activities #Вроде как запускать активности в войсе
 stream #Включать стрим
 use_external_emojis #Это вроде то же что и на строке 17
