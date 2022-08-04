@@ -54,25 +54,35 @@ class Permissions(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="Наличие роли у участника")
-    @commands.has_role("name") or @commands.has_role(id) #Позволяет выполнить команду если у человека есть заданная вами роль, название в кавычках либо айди без кавычек
+    @commands.command(name="Наличие_роли_у_участника")
+    @commands.has_role("name") or @commands.has_role(id) #Позволяет выполнить команду если у человека есть заданная вами роль, название в кавычках либо айди без кавычек (Можно и то и то сразу)
     async def user_has_role(self, ctx):
+        await ctx.send("Права есть!")
         
-    @commands.command(name="Наличие ролей у участника")
-    @commands.has_any_role("one","two","three") or @commands.bot_has_role(id1, id2, id3) #Позволяет выполнить команду если у человека есть одна из есть заданныъ вами ролей, названия в кавычках либо айди без кавычек
+    @commands.command(name="Наличие_ролей_у_участника")
+    @commands.has_any_role("one","two","three") or @commands.bot_has_role(id1, id2, id3) #Позволяет выполнить команду если у человека есть одна из есть заданныъ вами ролей, названия в кавычках либо айди без кавычек (Можно и то и то сразу)
     async def user_has_any_role(self, ctx):
+        await ctx.send("Права есть!")
       
-    @commands.command(name="Наличие роли у бота")
-    @commands.bot_has_role("name") or @commands.bot_has_role(id) #Позволяет выполнить команду если у бота есть заданная вами роль, название в кавычках либо айди без кавычек
+    @commands.command(name="Наличие_роли_у_бота")
+    @commands.bot_has_role("name") or @commands.bot_has_role(id) #Позволяет выполнить команду если у бота есть заданная вами роль, название в кавычках либо айди без кавычек (Можно и то и то сразу)
     async def bot_has_role(self, ctx):
+        await ctx.send("Права есть!")
         
-    @commands.command(name="Наличие ролей у бота")
-    @commands.bot_has_any_role("one","two","three") or @commands.bot_has_any_role(id1, id2, id3) #Позволяет выполнить команду если у бота есть заданная вами роль, название в кавычках либо айди без кавычек
+    @commands.command(name="Наличие_ролей_у_бота")
+    @commands.bot_has_any_role("one","two","three") or @commands.bot_has_any_role(id1, id2, id3) #Позволяет выполнить команду если у бота есть заданная вами роль, название в кавычках либо айди без кавычек (Можно и то и то сразу)
     async def bot_has_any_role(self, ctx):
+        await ctx.send("Права есть!")
         
-    @commands.command(name="Наличие права у участника")
+    @commands.command(name="Наличие_прав_у_участника")
     @commands.has_permissions(add_reactions=True, kick_members=True) #И так сколько угодно прав через запятую, я привёл пример, весь список прав в начале кога
-    async def bot_has_any_role(self, ctx):
+    async def has_permissions(self, ctx):
+        await ctx.send("Права есть!")
+        
+    @commands.command(name="Наличие_прав_у_бота")
+    @commands.bot_has_permissions(add_reactions=True, kick_members=True) #А это уже права у бота
+    async def bot_has_permissions(self, ctx):
+        await ctx.send("Права есть!")
         
 def setup(bot):
     bot.add_cog(Permissions(bot))
