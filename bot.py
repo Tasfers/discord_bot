@@ -1,6 +1,5 @@
 import disnake
 from disnake.ext import commands
-import os
 from config import settings
 
 class PersistentViewBot(commands.Bot):
